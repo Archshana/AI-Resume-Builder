@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="bg-bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="container">
+    <h1>AI Resume Builder</h1>
+
+    <form id="resumeForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="text" id="email" placeholder="Email" required>
+      <input type="text" id="phone" placeholder="Phone" required>
+      <input type="text" id="address" placeholder="Address" required>
+
+      <!-- Professional summary -->
+      <textarea id="summary" placeholder="Professional summary (2–3 sentences about you)" required></textarea>
+    
+      <!-- Where Studied (Education) -->
+      <textarea id="education" placeholder="Education (Where you studied, degrees, dates)" required></textarea>
+    
+      <!-- LinkedIn profile -->
+      <input type="text" id="linkedinName" placeholder="LinkedIn (e.g. Your Name)" required>
+      <input type="url" id="linkedinUrl" placeholder="LinkedIn URL (https://...)" required>
+    
+      <!-- Non-related referees -->
+      <textarea id="referees" placeholder="Non-related referees (names, positions, contacts)"></textarea>
+    
+      <!-- Optional certificates (image only, multiple) -->
+      <input type="text" id="certificateName" placeholder="Certificate image name(s) (optional)">
+      <textarea id="certificateUrl" placeholder="Certificate image URL(s) – for more than one, separate by comma or new line (https://...png/.jpg)"></textarea>
+
+      <!-- Optional projects -->
+      <textarea id="projects" placeholder="Projects (optional – titles, short descriptions, links)"></textarea>
+
+      <!-- Optional languages -->
+      <textarea id="languages" placeholder="Languages (optional – e.g. English, Tamil, Sinhala)"></textarea>
+
+      <textarea id="skills" placeholder="Skills (comma separated)" required></textarea>
+      <textarea id="experience" placeholder="Experience" required></textarea>
+    
+      <button type="button" onclick="generatePDF()">Download PDF</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
